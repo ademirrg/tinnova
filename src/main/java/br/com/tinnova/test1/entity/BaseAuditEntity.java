@@ -1,4 +1,4 @@
-package br.com.tinnova.entity;
+package br.com.tinnova.test1.entity;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -17,7 +17,7 @@ import java.time.LocalDateTime;
 @Setter
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
-public abstract class BaseAuditEntity implements br.com.tinnova.entity.BaseEntity {
+public abstract class BaseAuditEntity implements br.com.tinnova.test1.entity.BaseEntity {
 
     @Column(updatable = false)
     @CreatedDate

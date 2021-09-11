@@ -1,7 +1,7 @@
-package br.com.tinnova.controller;
+package br.com.tinnova.test1.controller;
 
-import br.com.tinnova.business.VoteBusiness;
-import br.com.tinnova.dto.VoteResponseDTO;
+import br.com.tinnova.test1.business.VoteBusiness;
+import br.com.tinnova.test1.dto.VoteResponseDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.http.ResponseEntity;

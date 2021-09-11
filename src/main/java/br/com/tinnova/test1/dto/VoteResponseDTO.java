@@ -1,4 +1,4 @@
-package br.com.tinnova.dto;
+package br.com.tinnova.test1.dto;
 
 import lombok.*;
 

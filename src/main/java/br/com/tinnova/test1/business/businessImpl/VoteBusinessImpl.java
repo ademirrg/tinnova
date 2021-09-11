@@ -1,9 +1,9 @@
-package br.com.tinnova.business.businessImpl;
+package br.com.tinnova.test1.business.businessImpl;
 
-import br.com.tinnova.business.VoteBusiness;
-import br.com.tinnova.dto.VoteDTO;
-import br.com.tinnova.dto.VoteResponseDTO;
-import br.com.tinnova.repository.VoteRepository;
+import br.com.tinnova.test1.business.VoteBusiness;
+import br.com.tinnova.test1.dto.VoteDTO;
+import br.com.tinnova.test1.dto.VoteResponseDTO;
+import br.com.tinnova.test1.repository.VoteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;

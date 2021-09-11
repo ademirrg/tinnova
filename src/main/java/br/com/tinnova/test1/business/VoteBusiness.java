@@ -1,6 +1,6 @@
-package br.com.tinnova.business;
+package br.com.tinnova.test1.business;
 
-import br.com.tinnova.dto.VoteResponseDTO;
+import br.com.tinnova.test1.dto.VoteResponseDTO;
 
 public interface VoteBusiness {
     VoteResponseDTO calculateAllVotePercent();

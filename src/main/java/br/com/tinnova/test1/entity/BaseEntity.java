@@ -1,4 +1,4 @@
-package br.com.tinnova.entity;
+package br.com.tinnova.test1.entity;
 
 import java.io.Serializable;
 
