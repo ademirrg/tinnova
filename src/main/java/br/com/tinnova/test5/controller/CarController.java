@@ -2,14 +2,15 @@ package br.com.tinnova.test5.controller;
 
 import br.com.tinnova.test5.business.CarBusiness;
 import br.com.tinnova.test5.dto.CarDTO;
+import br.com.tinnova.test5.dto.CarFormRequestInsertDTO;
+import br.com.tinnova.test5.dto.CarFormRequestPatchDTO;
+import br.com.tinnova.test5.dto.CarFormRequestUpdateDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -19,7 +20,7 @@ public class CarController {
     @Autowired @Lazy
     CarBusiness business;
 
-    @GetMapping()
+    @GetMapping
     private ResponseEntity<List<CarDTO>> findAllCars() {
         List<CarDTO> cars = business.findAll();
         if (cars.isEmpty()) {
@@ -35,6 +36,29 @@ public class CarController {
             return ResponseEntity.noContent().build();
         }
         return ResponseEntity.ok(car);
+    }
+
+    @PostMapping
+    private ResponseEntity<CarDTO> insertCar(@Valid @RequestBody CarFormRequestInsertDTO requestDTO) {
+        return ResponseEntity.ok(business.insertCar(requestDTO));
+    }
+
+    @PutMapping("{id}")
+    private ResponseEntity<CarDTO> updateCar(@Valid @RequestBody CarFormRequestUpdateDTO requestDTO, @PathVariable Long id) {
+        requestDTO.setId(id);
+        return ResponseEntity.ok(business.updateCar(requestDTO));
+    }
+
+    @PatchMapping("{id}")
+    private ResponseEntity<CarDTO> patchCar(@Valid @RequestBody CarFormRequestPatchDTO requestDTO, @PathVariable Long id) {
+        requestDTO.setId(id);
+        return ResponseEntity.ok(business.updateCar(requestDTO));
+    }
+
+    @PostMapping("{id}")
+    private ResponseEntity<CarDTO> deleteCar(@PathVariable Long id) {
+        business.deleteCar(id);
+        return ResponseEntity.ok().build();
     }
 
 }
