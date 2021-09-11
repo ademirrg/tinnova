@@ -1,17 +1,13 @@
 package br.com.tinnova.test1.entity;
 
-import lombok.*;
+import lombok.Data;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name = "vote")
-@Getter
-@Setter
-@Builder
-@AllArgsConstructor
-@NoArgsConstructor
-public class Vote extends BaseAuditEntity {
+@Data
+public class Vote {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

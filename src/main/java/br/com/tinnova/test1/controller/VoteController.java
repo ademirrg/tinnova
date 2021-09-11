@@ -14,40 +14,40 @@ import org.springframework.web.bind.annotation.RestController;
 public class VoteController {
 
     @Autowired @Lazy
-    VoteBusiness voteBusiness;
+    VoteBusiness business;
 
     @GetMapping("/percent/all")
     private ResponseEntity<VoteResponseDTO> getAllVotesPercent() {
-        VoteResponseDTO responseDTO = voteBusiness.calculateAllVotePercent();
+        VoteResponseDTO responseDTO = business.calculateAllVotePercent();
         if (responseDTO == null) {
-            return ResponseEntity.notFound().build();
+            return ResponseEntity.noContent().build();
         }
         return ResponseEntity.ok(responseDTO);
     }
 
     @GetMapping("/percent/valid-votes")
     private ResponseEntity<VoteResponseDTO> getValidVotesPercent() {
-        VoteResponseDTO responseDTO = voteBusiness.calculateValidVotesPercent();
+        VoteResponseDTO responseDTO = business.calculateValidVotesPercent();
         if (responseDTO == null) {
-            return ResponseEntity.notFound().build();
+            return ResponseEntity.noContent().build();
         }
         return ResponseEntity.ok(responseDTO);
     }
 
     @GetMapping("/percent/blank-votes")
     private ResponseEntity<VoteResponseDTO> getBlankVotesPercent() {
-        VoteResponseDTO responseDTO = voteBusiness.calculateBlankVotesPercent();
+        VoteResponseDTO responseDTO = business.calculateBlankVotesPercent();
         if (responseDTO == null) {
-            return ResponseEntity.notFound().build();
+            return ResponseEntity.noContent().build();
         }
         return ResponseEntity.ok(responseDTO);
     }
 
     @GetMapping("/percent/null-votes")
     private ResponseEntity<VoteResponseDTO> getNullVotesPercent() {
-        VoteResponseDTO responseDTO = voteBusiness.calculateNullVotesPercent();
+        VoteResponseDTO responseDTO = business.calculateNullVotesPercent();
         if (responseDTO == null) {
-            return ResponseEntity.notFound().build();
+            return ResponseEntity.noContent().build();
         }
         return ResponseEntity.ok(responseDTO);
     }
