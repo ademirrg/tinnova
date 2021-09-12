@@ -1,4 +1,4 @@
-# tinnova
+# Tinnova
 Necessário ter o mysql server instalado com configuração de root padrão sem senha e na porta 3306, ou você poderá modificar as credenciais no arquivo application.properties.
 Estou utilizando um versionador de banco de dados chamado flyway, já possui scripts de criação da tabela de votos e inserção de dados do teste 1 e as tabelas do teste 5, inserindo algumas marcas pre cadastradas que devem ser consumidas pelo frontend durante o cadastro de veículos, assim se imepede de enviar a marca incorreta na persistência de dados.
 
