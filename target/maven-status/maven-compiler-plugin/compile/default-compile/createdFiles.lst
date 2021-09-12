@@ -5,6 +5,7 @@ br/com/tinnova/test1/dto/VoteDTO.class
 br/com/tinnova/test5/business/CarBusiness.class
 br/com/tinnova/TinnovaApp.class
 br/com/tinnova/test5/business/CarBrandBusiness.class
+br/com/tinnova/test2/Test2BubbleSort.class
 br/com/tinnova/test5/dto/CarDTO$CarDTOBuilder.class
 br/com/tinnova/test5/dto/CarBrandDTO.class
 br/com/tinnova/test1/repository/VoteRepository.class
